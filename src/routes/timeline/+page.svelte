@@ -1,12 +1,13 @@
 <script lang="ts">
-	import Title from '$components/Title.svelte';
-	import timeline from '$data/timeline';
-	import { getServer } from '$utils/time';
+	import { onMount, tick } from 'svelte';
 	import dayjs from 'dayjs';
 	import duration from 'dayjs/plugin/duration';
 	import timezone from 'dayjs/plugin/timezone';
-	import { onMount, tick } from 'svelte';
+	import Title from '$components/Title.svelte';
+	import timeline from '$data/timeline';
 	import Item from './Item.svelte';
+	import Checkbox from '$components/Checkbox.svelte';
+	import { getServer } from '$utils/time';
 
 	dayjs.extend(duration);
 	dayjs.extend(timezone);
